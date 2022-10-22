@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800;900&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1A1B1D;
+}
+
+/* smooth scroling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Bar */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #161616;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 20px;
+    background-color: #161616;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-button {
+    background-color: black;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #333333;
+    border-radius: 50px;
+}
+
+
+
+/* header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    background-color: #1A1B1D;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    list-style-type: none;
+    padding: 0px 100px 0px 0px;
+}
+
+.navigation li {
+    list-style-type: none;
+    padding: 10px 15px;
+}
+
+.navigation li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.navigation>li:hover {
+    color: #fff;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+    background-color: #212224;
+}
+
+.navigation>li>a:hover {
+    color: #fff;
+}
+
+
+
+.dropdown {
+    display: none;
+    margin: 10px 0px;
+}
+
+.navigation>li:hover .dropdown{
+    display:block;
+    position: absolute;
+    background-color: #212224;
+    border-radius:  0px 5px 5px 5px;
+}
+
+.dropdown>li>a{
+    font-weight:400;
+}
+
+.dropdown>li>a:hover {
+    color: #fff;
+    font-weight: bolder;
+    
+}
+
+.dropdown>li {
+    margin: 5px;
+}
+
+.logo::selection {
+    color: none;
+    background: none;
+}
+
+.keAtas {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px;
+}
+
+
+/* Home Page */
+
+#homePage {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1A1B1D;
+}
+
+.circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 5%;
+    top: 10%;
+    background-image: radial-gradient(closest-side at 50% 50%, #0A2864, rgba(23, 38, 67, 0));
+    opacity: 0.3;
+}
+
+.home>img {
+    position: absolute;
+    right: 0%;
+    top: 15%;
+    animation: mymouse 8s ease-in-out infinite;
+}
+
+.home>img::selection {
+    color: none;
+    background: none;
+}
+
+@keyframes mymouse {
+    50% {
+        right: 5%;
+    }
+}
+
+.home>h3 {
+    position: absolute;
+    left: 110px;
+    top: 22%;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+.home>h1 {
+    position: absolute;
+    left: 110px;
+    top: 25%;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.blue {
+    color: #2395FD;
+    font-family: 'Raleway', sans-serif;
+}
+
+.home>p {
+    position: absolute;
+    left: 110px;
+    top: 49%;
+    width: 35%;
+    color: rgb(182, 182, 182);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: .8em;
+}
+
+.watermarkIcon {
+    position: absolute;
+    left: 110px;
+    bottom: 20%;
+}
+
+.watermarkIcon>a>img {
+    width: 30px;
+    height: auto;
+}
+
+/* Home Page 2 */
+
+#definitionPage {
+    min-height: 100vh;
+    width: auto;
+    background-color: #161616;
+}
+
+.about1 img {
+    position: absolute;
+    left: 0px;
+    top: 110%;
+}
+
+.about1 h1 {
+    position: absolute;
+    top: 130%;
+    left: 40%;
+    font-size: 2em;
+    color: #017A23;
+}
+
+.about1 p {
+    position: absolute;
+    top: 140%;
+    left: 40%;
+    color: rgb(182, 182, 182);
+}
+
+/* About Page 2 */
+
+#historyPage {
+    min-height: 100vh;
+    max-height: 150vh;
+    width: 100%;
+    /* background-color: #191b20; */
+    background-image: linear-gradient( #161616, #1d1f24 );
+}
+
+.about2>h1 {
+    position: absolute;
+    left: 43%;
+    top: 215%;
+    color: #fff;
+    font-size: 2.3em;
+}
+
+.par {
+    position: absolute;
+    left: 160px;
+    top: 230%;
+    text-align: justify;
+    width: 80%;
+    color: rgb(182, 182, 182);
+    font-size: 1em;
+    padding: 20px;
+    text-indent: 15px;
+}
+
+.par2 {
+    position: absolute;
+    left: 160px;
+    top: 260%;
+    text-align: justify;
+    width: 75%;
+    color: rgb(182, 182, 182);
+    font-size: 1em;
+    padding: 50px 20px;
+    text-indent: 15px;
+}
+
+
+
+/* About Page 3 */
+
+#functionPage {
+    height: 100vh;
+    width: auto;
+    background-color: #1d1f24;
+}
+
+.about3>h1 {
+    position: absolute;
+    left: 65%;
+    top: 315%;
+    color: #fff;
+    font-size: 2.3em;
+}
+
+.containerFung {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 53%;
+    top: 330%;
+}
+
+.element {
+    padding: 10px 20px;
+}
+
+.persegi {
+    height: 340px;
+    width: 10px;
+    background-color: #2196F3;
+    border-radius: 20px;
+}
+
+.bulat {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: #2196F3;
+}
+
+.satu {
+    position: absolute;
+    left: 15px;
+    top: 30px;
+}
+
+.dua {
+    position: absolute;
+    left:15px;
+    top: 95px;
+}
+
+.tiga {
+    position: absolute;
+    left: 15px;
+    top: 150px;
+}
+
+.empat {
+    position: absolute;
+    left: 15px;
+    top: 230px;
+}
+
+.lima {
+    position: absolute;
+    left: 15px;
+    top: 310px;
+}
+
+.fungsi {
+    list-style-type: none;
+}
+
+.fungsi>li>p {
+    width: 85%;
+    color: white;
+    padding: 10px 10px 10px 50px;
+}
+
+/* footer */
+
+#footerHome{
+    height: 50vh;
+    width: 100%;
+    background-color: #121213;
+}
+
+.containerFoot{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 200px;
+}
+
+.containerFoot ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.containerFoot>ul>li{
+    padding: 3px;
+}
+
+.containerFoot>ul>li>a {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.containerFoot>ul>li>p{
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.containerFoot>ul>li>h3{
+    color: #fff;
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.footSosmed{
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.footSosmed>a{
+    padding: 0px 5px;
+}

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800;900&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1A1B1D;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Bar */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #161616;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 20px;
+    background-color: #161616;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-button {
+    background-color: black;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #333333;
+    border-radius: 50px;
+}
+
+
+
+/* header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    background-color: #1A1B1D;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    list-style-type: none;
+    padding: 0px 100px 0px 0px;
+}
+
+.navigation li {
+    list-style-type: none;
+    padding: 10px 15px;
+}
+
+.navigation li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.navigation>li:hover {
+    color: #fff;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+    background-color: #212224;
+}
+
+.navigation>li>a:hover {
+    color: #fff;
+}
+
+
+
+.dropdown {
+    display: none;
+    margin: 10px 0px;
+}
+
+.navigation>li:hover .dropdown{
+    display:block;
+    position: absolute;
+    background-color: #212224;
+    border-radius:  0px 5px 5px 5px;
+}
+
+.dropdown>li>a{
+    font-weight:400;
+}
+
+.dropdown>li>a:hover {
+    color: #fff;
+    font-weight: bolder;
+    
+}
+
+.dropdown>li {
+    margin: 5px;
+}
+
+.logo::selection {
+    color: none;
+    background: none;
+}
+
+.keAtas {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px;
+}
+
+/* content */
+
+.newsPage1 {
+    height: 130vh;
+    width: 100%;
+    background-color: #17181A;
+}
+
+.newsHeader {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.containerNews {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    width: 100%;
+    top: 25%;
+}
+
+.newsBox1{
+    display: flex;
+    flex-direction: column;
+    gap: 44px 0px;
+}
+
+.newsCard {
+    height: 200px;
+    width: auto;
+}
+
+.newsCard>a {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+}
+
+.newsCard>a:hover {
+    color: rgb(141, 141, 141);
+}
+
+.newsCard>a>h4 {
+    width: 250px;
+    padding: 5px;
+}
+
+.newsCard2>h4 {
+    color:rgb(182, 182, 182) ;
+}
+
+.newsBox2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+}
+
+.containerCard2 {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 20px;
+}
+
+.containerNews img {
+    width: 250px;
+    height: 140px;
+    border-radius: 5px;
+}
+
+/* footer */
+
+#footerHome{
+    height: 50vh;
+    width: 100%;
+    background-color: #121213;
+}
+
+.containerFoot{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 200px;
+}
+
+.containerFoot ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.containerFoot>ul>li{
+    padding: 3px;
+}
+
+.containerFoot>ul>li>a {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.containerFoot>ul>li>p{
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.containerFoot>ul>li>h3{
+    color: #fff;
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.footSosmed{
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.footSosmed>a{
+    padding: 0px 5px;
+}

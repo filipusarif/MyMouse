@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800;900&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1A1B1D;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Bar */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #161616;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 20px;
+    background-color: #161616;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-button {
+    background-color: black;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #333333;
+    border-radius: 50px;
+}
+
+
+
+/* header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    background-color: #1A1B1D;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    list-style-type: none;
+    padding: 0px 100px 0px 0px;
+}
+
+.navigation li {
+    list-style-type: none;
+    padding: 10px 15px;
+}
+
+.navigation li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.navigation>li:hover {
+    color: #fff;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+    background-color: #212224;
+}
+
+.navigation>li>a:hover {
+    color: #fff;
+}
+
+
+
+.dropdown {
+    display: none;
+    margin: 10px 0px;
+}
+
+.navigation>li:hover .dropdown{
+    display:block;
+    position: absolute;
+    background-color: #212224;
+    border-radius:  0px 5px 5px 5px;
+}
+
+.dropdown>li>a{
+    font-weight:400;
+}
+
+.dropdown>li>a:hover {
+    color: #fff;
+    font-weight: bolder;
+    
+}
+
+.dropdown>li {
+    margin: 5px;
+}
+
+.logo::selection {
+    color: none;
+    background: none;
+}
+
+.keAtas {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px;
+}
+
+
+/* Product Page 1 */
+
+.product1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../gambar/effectmouse2.jpg);
+    background-size: 1360px 700px;
+    background-attachment: fixed;
+}
+
+.contentProduct1 {
+    height: 40vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), #17181A, #17181A);
+    position: absolute;
+    top: 60%;
+}
+
+.contentProduct1>h1 {
+    position: absolute;
+    left: 110px;
+    top: 65%;
+    color: #fff;
+    font-size: 2.5em;
+}
+
+
+.blue{
+    color: #10a2bb;
+}
+
+/* Product Page 2 */
+
+.product2{
+    min-height: 340vh;
+    width: 100%;
+    background-color: #17181A;
+}
+
+.jenisHead {
+    position: absolute;
+    top: 110%;
+    left: 40%;
+    font-size: 2em;
+    color: #fff;
+}
+
+.jenis {
+    position: absolute;
+    left: 11%;
+    top: 125%;
+    color: rgb(182, 182, 182);
+    font-size: 1.1em;
+}
+
+.jenisPort {
+    position: absolute;
+    top: 133%;
+    left: 13%;
+    color: rgb(182, 182, 182);
+    font-size: 1.1em;
+}
+
+.jenisSensor {
+    position: absolute;
+    top: 193%;
+    left: 13%;
+    color: rgb(182, 182, 182);
+    font-size: 1.1em;
+}
+/* Area Jenis Port Mouse */
+
+
+
+.containerPort {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    top: 140%;
+    
+}
+
+.cardPort {
+    width: 250px;
+    height: 270px;
+    box-shadow: 5px 5px 15px #000;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.gam{
+    width: 250px;
+    height: 270px ;
+    filter: grayscale(0);
+}
+
+.ket {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    background-color: rgba(27, 26, 26, 0.699) ;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.ket>h1 {
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #161616;
+}
+
+.ket>p {
+    font-size: 14px ;
+    margin: 5px 10px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.cardPort:hover {
+    cursor: pointer;
+}
+
+.cardPort:hover .ket{
+    height: 270px;
+    bottom: 0;
+    transition: .3s ;
+    border-radius: 10px;
+}
+
+.cardPort:hover .ket>p{
+    visibility:visible;
+    opacity: 1;
+    transition: all .7s ease-in;
+}
+
+.cardPort:hover .gam{
+    transform: scale(1.2) ;
+    transition: all .2s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.containerSensor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    top: 200%;
+}
+
+/* tabel kelebihan kekurangan */
+
+.headKel {
+    position: absolute;
+    top: 255%;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+}
+
+.containerTable {
+    position: absolute;
+    top: 265%;
+    left: 13%;
+}
+
+.tabelKel {
+    width: 90%;
+    
+}
+
+table,th,td {
+    border: 1px solid rgb(145, 145, 145);
+    border-collapse: collapse;
+    color:rgb(145, 145, 145);
+}
+
+th,td {
+    padding: 10px;
+}
+
+.jenisTable {
+    width: 10%;
+}
+
+.kelebihan {
+    width: 40%;
+}
+/* Rekomendasi */
+
+.rec{
+    position: absolute;
+    top: 390% ;
+    left: 110px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.containeritems {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 400%;
+    width: 100%;
+}
+
+.carditems {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    background-color: #121314;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+}
+
+.carditems>img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.carditems>p {
+    padding: 10px;
+}
+
+/* footer */
+
+#footerProduct{
+    height: 50vh;
+    width: 100%;
+    background-color: #121213;
+}
+
+.containerFoot{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 200px;
+    bottom: 0;
+}
+
+.containerFoot ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.containerFoot>ul>li{
+    padding: 3px;
+}
+
+.containerFoot>ul>li>a {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.containerFoot>ul>li>p{
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.containerFoot>ul>li>h3{
+    color: #fff;
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.footSosmed{
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.footSosmed>a{
+    padding: 0px 5px;
+}
