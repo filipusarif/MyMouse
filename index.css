@@ -118,6 +118,7 @@ body::-webkit-scrollbar-track {
     margin: 5px;
 }
 
+
 .logo::selection {
     color: none;
     background: none;
