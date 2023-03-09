@@ -78,6 +78,20 @@ body::-webkit-scrollbar-track {
     color: rgb(182, 182, 182);
     text-transform: capitalize;
 }
+.navigation li button {
+    display: block;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    background: none;
+    border:none;
+}
+
+.navigation li button:hover {
+    color: #fff;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+}
 
 .navigation>li:hover {
     color: #fff;
@@ -92,17 +106,25 @@ body::-webkit-scrollbar-track {
 }
 
 
-.dropdown {
+.dropdown1 {
     display: none;
     margin: 10px 0px;
-}
-
-.navigation>li:hover .dropdown{
-    display:block;
     position: absolute;
     background-color: #212224;
     border-radius:  0px 5px 5px 5px;
 }
+.dropdown2 {
+    display: None;
+    margin: 10px 0px;
+    position: absolute;
+    background-color: #212224;
+    border-radius:  0px 5px 5px 5px;
+}
+
+/* .navigation>li .dropdown{
+    display:block;
+    
+} */
 
 .dropdown>li>a{
     font-weight:400;
