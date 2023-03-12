@@ -17,24 +17,24 @@ html {
 
 /* Scroll Bar */
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
     background-color: #161616;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     width: 10px;
     height: 20px;
     background-color: #161616;
     border-radius: 50px;
 }
 
-body::-webkit-scrollbar-button {
+::-webkit-scrollbar-button {
     background-color: black;
     border-radius: 50px;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: #333333;
     border-radius: 50px;
 }
@@ -46,7 +46,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 100px;
+    padding: 5px 10%;
     position: fixed;
     top: 0;
     left: 0;
@@ -75,6 +75,21 @@ body::-webkit-scrollbar-track {
     color: rgb(182, 182, 182);
     text-transform: capitalize;
 }
+.navigation li button {
+    display: block;
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    font-size: 15px;
+    background: none;
+    border:none;
+}
+
+.navigation li button:hover {
+    color: #fff;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+}
 
 .navigation>li:hover {
     color: #fff;
@@ -89,18 +104,25 @@ body::-webkit-scrollbar-track {
 }
 
 
-
-.dropdown {
+.dropdown1 {
     display: none;
     margin: 10px 0px;
-}
-
-.navigation>li:hover .dropdown{
-    display:block;
     position: absolute;
     background-color: #212224;
     border-radius:  0px 5px 5px 5px;
 }
+.dropdown2 {
+    display: None;
+    margin: 10px 0px;
+    position: absolute;
+    background-color: #212224;
+    border-radius:  0px 5px 5px 5px;
+}
+
+/* .navigation>li .dropdown{
+    display:block;
+    
+} */
 
 .dropdown>li>a{
     font-weight:400;
@@ -116,6 +138,7 @@ body::-webkit-scrollbar-track {
     margin: 5px;
 }
 
+
 .logo::selection {
     color: none;
     background: none;
@@ -128,6 +151,156 @@ body::-webkit-scrollbar-track {
     padding: 10px 15px;
     background-color: #fff;
     border-radius: 50px;
+    /* box-shadow: 0px 0px 15px #fff; */
+}
+
+/* hamburger menu */
+
+.hamburger {
+    height: 20px;
+    width: 25px;
+    /* background-color: #017A23; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    display: none;
+
+}
+
+.hamburger input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.hamburger span{
+    height: 4px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+
+.hamburger span:nth-child(2){
+    transform-origin: 100% 0;
+}
+
+.hamburger span:nth-child(4){
+    transform-origin: 100% 0;
+}
+
+.hamburger input:checked ~ span:nth-child(2){
+    transform: rotate(-43deg) translate(-2px,-2px);
+}
+
+.hamburger input:checked ~ span:nth-child(3){
+    transform: translate(30px) scale(0);
+}
+
+.hamburger input:checked ~ span:nth-child(4){
+    transform: rotate(45deg) translate(1px,1px);
+}
+
+.toko {
+    display: none;
+}
+
+/* Responsive navbar */
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    .navigation li {
+        padding: 10px 7px;
+    }
+
+    .container {
+    padding: 5px 10%;
+    }
+
+    .row2 {
+        height: unset;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:576px) {
+    .shopLogo {
+        display: none;
+    }
+    
+    .hamburger {
+        display:flex;
+    }
+    
+    .logo {
+        width: 150px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        justify-content:start;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 50vh;
+        background-color:#161618 ;
+        padding-left: 80px;
+        padding-top: 50px;
+        opacity: 0;
+        transform: translateY(-100%);
+        z-index: 0;
+        /* display: none; */
+        transition: all .4s ease;
+    }
+
+    .slide {
+        transform: translateY(0%);
+        opacity: 1;
+        /* transition: all .4s ease;
+        display: flex; */
+    }
+    .toko {
+        display: flex;
+    }
+
+    .log {
+        display: none;
+    }
+
+    .containerPort {
+        flex-direction: column;
+    }
+
+    .containerSensor {
+        flex-direction: column;
+    }
+
+    .containeritems {
+        flex-direction: column;
+    align-items: center;
+
+    }
+
+    /* footer */
+    .containerFoot {
+        flex-direction: column;
+    }
+}
+
+.keAtas {
+    position: fixed;
+    z-index: 2;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
     box-shadow: 0px 0px 15px;
 }
 
@@ -135,24 +308,36 @@ body::-webkit-scrollbar-track {
 /* Product Page 1 */
 
 .product1 {
-    height: 100vh;
     width: 100%;
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0)fff; */
     background-image: url(../gambar/effectmouse2.jpg);
-    background-size: 1360px 700px;
+    background-size:cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
+/* .product1>img {
+    width: 100%;
+    height: auto;
+    /* background-attachment: fixed; */
+    /* background-position: 0; */
+    /*position: fixed;
+    z-index: 0;
+} */
+
 .contentProduct1 {
-    height: 40vh;
+    height: 45vh;
     width: 100%;
     background-image: linear-gradient(rgba(255, 255, 255, 0), #17181A, #17181A);
     position: absolute;
     top: 60%;
+    padding-inline: 10%;
 }
 
 .contentProduct1>h1 {
     position: absolute;
-    left: 110px;
+    /* left: 110px; */
     top: 65%;
     color: #fff;
     font-size: 2.5em;
@@ -166,41 +351,38 @@ body::-webkit-scrollbar-track {
 /* Product Page 2 */
 
 .product2{
-    min-height: 340vh;
+    /* min-height: 340vh; */
     width: 100%;
     background-color: #17181A;
+    padding-inline: 10%;
+
 }
 
 .jenisHead {
-    position: absolute;
-    top: 110%;
-    left: 40%;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    /* top: 110%; */
+    /* z-index: 2; */
     font-size: 2em;
     color: #fff;
 }
 
 .jenis {
-    position: absolute;
+    position: relative;
     left: 11%;
     top: 125%;
+    margin-top: 40px;
+    margin-bottom: 10px;
     color: rgb(182, 182, 182);
     font-size: 1.1em;
 }
 
-.jenisPort {
-    position: absolute;
-    top: 133%;
-    left: 13%;
-    color: rgb(182, 182, 182);
-    font-size: 1.1em;
-}
-
-.jenisSensor {
-    position: absolute;
-    top: 193%;
-    left: 13%;
-    color: rgb(182, 182, 182);
-    font-size: 1.1em;
+.product2 > h3 {
+    color: #fff;
+    font-weight: 400;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 /* Area Jenis Port Mouse */
 
@@ -208,10 +390,11 @@ body::-webkit-scrollbar-track {
 
 .containerPort {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 20px;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 140%;
     
 }
@@ -222,6 +405,7 @@ body::-webkit-scrollbar-track {
     box-shadow: 5px 5px 15px #000;
     overflow: hidden;
     border-radius: 10px;
+    position: relative;
 }
 
 
@@ -282,37 +466,40 @@ body::-webkit-scrollbar-track {
 .containerSensor {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     width: 100%;
-    position: absolute;
-    top: 200%;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 /* tabel kelebihan kekurangan */
 
 .headKel {
-    position: absolute;
+    /* position: absolute; */
     top: 255%;
     width: 100%;
     text-align: center;
     color:#fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .containerTable {
-    position: absolute;
-    top: 265%;
-    left: 13%;
+    width: 100%;
+    overflow-x: auto;
 }
 
 .tabelKel {
-    width: 90%;
-    
+    width: 100%;
 }
 
 table,th,td {
     border: 1px solid rgb(145, 145, 145);
     border-collapse: collapse;
     color:rgb(145, 145, 145);
+
 }
 
 th,td {
@@ -329,9 +516,9 @@ th,td {
 /* Rekomendasi */
 
 .rec{
-    position: absolute;
+    /* position: absolute;
     top: 390% ;
-    left: 110px;
+    left: 110px; */
     color: #fff;
     font-weight: 400;
 }
@@ -340,9 +527,10 @@ th,td {
     display: flex;
     justify-content: center;
     gap: 20px;
-    position: absolute;
-    top: 400%;
-    width: 100%;
+    /* position: absolute; */
+    /* top: 400%;
+    width: 100%; */
+    padding-bottom: 30px;
 }
 
 .carditems {
@@ -368,22 +556,27 @@ th,td {
 
 /* footer */
 
-#footerProduct{
-    height: 50vh;
+#footerHome{
+    /* height: 50vh; */
     width: 100%;
     background-color: #121213;
+    padding-inline: 10%;
+
 }
 
 .containerFoot{
     display: flex;
     justify-content: space-around;
     padding: 40px 200px;
-    bottom: 0;
+    padding-inline: 10%;
+    /* background-color: #017A23; */
+    /* overflow-x: hidden; */
 }
 
 .containerFoot ul{
     list-style-type: none;
     text-align: center;
+    /* width:max-content; */
 }
 
 .containerFoot>ul>li{
@@ -410,9 +603,11 @@ th,td {
 }
 
 .footSosmed{
-    text-align: center;
     padding: 15px;
-    
+    width: 100%;
+    /* position: absolute; */
+    text-align: center;
+    overflow-x: hidden;
 }
 
 .footSosmed>a{

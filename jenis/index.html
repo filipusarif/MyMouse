@@ -13,23 +13,23 @@
 <body>
     <!-- Header -->
     <header class="container">
-        <a href="../" class="logo">
+        <a href="../index.html #homePage" class="logo">
             <img class="logo" src="../gambar/logoWeb.png" alt="Mymouse" width="180px">
         </a>
-        <nav>
-            <ul class="navigation">
-                <li><a href="../">beranda</a></li>
-                <li><a href="">tetikus</a>
-                    <ul class="dropdown">
+        <nav class="">
+            <ul class="navigation ">
+                <li><a href="../index.html">beranda</a></li>
+                <li><button id="btnDrop1">tetikus</button>
+                    <ul class="dropdown1" id="drop1">
                         <li><a href="../index.html#definitionPage">pengertian</a></li>
                         <li><a href="../index.html#historyPage">sejarah</a></li>
                         <li><a href="../index.html#functionPage">Fungsi</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html">jenis</a></li>
-                <li><a href="../berita/index.html">berita</a></li>
-                <li><a href="">kontak</a>
-                    <ul class="dropdown">
+                <li><a href="/">jenis</a></li>
+                <li><a href="../berita/">berita</a></li>
+                <li><button onclick="btnTetikus()" id="btnDrop2">kontak</button>
+                    <ul class="dropdown2" id="drop2">
                         <li><a href="https://www.facebook.com/mymouseofc/" target="_blank">Facebook</a></li>
                         <li><a href="https://twitter.com/curvast" target="_blank">Twiter</a></li>
                         <li><a href="https://www.instagram.com/mymouseofc/" target="_blank">Instagram</a></li>
@@ -39,28 +39,32 @@
                         </li>
                     </ul>
                 </li>
+                <li class="toko"><a href="../toko/">toko</a></li>
             </ul>
         </nav>
-        <a href="../toko/"><img class="shopLogo" src="../gambar/Union.png" alt="" width="30px"></a>
+        <a href="toko/" class="log"><img class="shopLogo" src="../gambar/Union.png" alt="" width="30px"></a>
+        <div class="hamburger">
+            <input type="checkbox" name="" id="">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
-    <div class="keAtas">
-        <a href="#product"><img src="../gambar/keatas.png" alt="keatas" width="30px" height="auto"></a>
-    </div>
+
+    <a href="#product" class="keAtas"><img src="../gambar/keatas.png" alt="keatas" width="30px" height="auto"></a>
+
 
 
     <section id="product" class="product1">
+        <!-- <img src="../gambar/effectmouse2.jpg" alt=""> -->
         <div class="contentProduct1">
             <h1>What's up <span class="blue"> Everyone</span></h1>
         </div>
     </section>
     <section id="productPage2" class="product2">
         <h1 class="jenisHead">Jenis Jenis Mouse</h1>
-
         <p class="jenis">Jenis Mouse terbagi menjadi 2 yaitu dengan</p>
-        <ol>
-            <li class="jenisPort">Jenis portnya</li>
-            <li class="jenisSensor">Jenis sensornya</li>
-        </ol>
+        <h3 class="jenisPort">1. Jenis portnya</h3>
 
 
         <div class="containerPort">
@@ -103,6 +107,8 @@
             </div>
         </div>
 
+
+        <h3 class="jenisSensor">2. Jenis sensornya</h3>
         <div class="containerSensor">
             <div class="cardPort">
                 <img class="gam" src="../gambar/mekanikal.jpg" alt="Mouse Serial">
@@ -309,6 +315,7 @@
                     src="../gambar/sosmed/linkedin.png" alt="li"></a>
         </div>
     </footer>
+    <script src="../script.js"></script>
 
 </body>
 

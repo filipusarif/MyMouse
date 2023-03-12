@@ -81,6 +81,7 @@ body::-webkit-scrollbar-track {
 .navigation li button {
     display: block;
     text-decoration: none;
+    font-size: 15px;
     color: rgb(182, 182, 182);
     text-transform: capitalize;
     background: none;
@@ -153,7 +154,7 @@ body::-webkit-scrollbar-track {
     padding: 10px 15px;
     background-color: #fff;
     border-radius: 50px;
-    box-shadow: 0px 0px 15px;
+    box-shadow: 0px 0px 15px  #17181A;
 }
 
 /* hamburger menu */
@@ -266,7 +267,6 @@ body::-webkit-scrollbar-track {
         opacity: 1;
         /* transition: all .4s ease;
         display: flex; */
-
     }
 
     .toko {

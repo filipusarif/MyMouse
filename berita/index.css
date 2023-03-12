@@ -11,6 +11,8 @@ body {
     background-color: #1A1B1D;
 }
 
+/* smooth scroling */
+
 html {
     scroll-behavior: smooth;
 }
@@ -46,7 +48,7 @@ body::-webkit-scrollbar-track {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 100px;
+    padding: 5px 10%;
     position: fixed;
     top: 0;
     left: 0;
@@ -75,6 +77,21 @@ body::-webkit-scrollbar-track {
     color: rgb(182, 182, 182);
     text-transform: capitalize;
 }
+.navigation li button {
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    background: none;
+    border:none;
+}
+
+.navigation li button:hover {
+    color: #fff;
+    font-weight: bolder;
+    transition: all .2s ease-in-out;
+}
 
 .navigation>li:hover {
     color: #fff;
@@ -89,18 +106,25 @@ body::-webkit-scrollbar-track {
 }
 
 
-
-.dropdown {
+.dropdown1 {
     display: none;
     margin: 10px 0px;
-}
-
-.navigation>li:hover .dropdown{
-    display:block;
     position: absolute;
     background-color: #212224;
     border-radius:  0px 5px 5px 5px;
 }
+.dropdown2 {
+    display: None;
+    margin: 10px 0px;
+    position: absolute;
+    background-color: #212224;
+    border-radius:  0px 5px 5px 5px;
+}
+
+/* .navigation>li .dropdown{
+    display:block;
+    
+} */
 
 .dropdown>li>a{
     font-weight:400;
@@ -115,6 +139,7 @@ body::-webkit-scrollbar-track {
 .dropdown>li {
     margin: 5px;
 }
+
 
 .logo::selection {
     color: none;
@@ -131,31 +156,185 @@ body::-webkit-scrollbar-track {
     box-shadow: 0px 0px 15px;
 }
 
+/* hamburger menu */
+
+.hamburger {
+    height: 20px;
+    width: 25px;
+    /* background-color: #017A23; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    display: none;
+
+}
+
+.hamburger input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.hamburger span{
+    height: 4px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+
+.hamburger span:nth-child(2){
+    transform-origin: 100% 0;
+}
+
+.hamburger span:nth-child(4){
+    transform-origin: 100% 0;
+}
+
+.hamburger input:checked ~ span:nth-child(2){
+    transform: rotate(-43deg) translate(-2px,-2px);
+}
+
+.hamburger input:checked ~ span:nth-child(3){
+    transform: translate(30px) scale(0);
+}
+
+.hamburger input:checked ~ span:nth-child(4){
+    transform: rotate(45deg) translate(1px,1px);
+}
+
+.toko {
+    display: none;
+}
+
+/* Responsive navbar */
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    .navigation li {
+        padding: 10px 7px;
+    }
+
+    .container {
+    padding: 5px 10%;
+    }
+
+    .row2 {
+        height: unset;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:576px) {
+    .shopLogo {
+        display: none;
+    }
+    
+    .hamburger {
+        display:flex;
+    }
+    
+    .logo {
+        width: 150px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        justify-content:start;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 50vh;
+        background-color:#161618 ;
+        padding-left: 80px;
+        padding-top: 50px;
+        opacity: 0;
+        transform: translateY(-100%);
+        z-index: 0;
+        /* display: none; */
+        transition: all .4s ease;
+    }
+
+    .slide {
+        transform: translateY(0%);
+        opacity: 1;
+        /* transition: all .4s ease;
+        display: flex; */
+    }
+
+    .toko {
+        display: flex;
+    }
+
+    /* footer */
+    .containerFoot {
+        flex-direction: column;
+    }
+}
+
+.keAtas {
+    position: fixed;
+    z-index: 2;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px #17181A;
+    /* text-decoration: none; */
+}
+
 /* content */
 
 .newsPage1 {
-    height: 130vh;
+    /* height: 130vh; */
     width: 100%;
     background-color: #17181A;
+    /* padding-inline: 10%; */
+    /* overflow-x: hidden; */
 }
 
 .newsHeader {
-    position: absolute;
+    /* position: absolute; */
     top: 15%;
     width: 100%;
+    padding-top: 60px;
     text-align: center;
     color: #fff;
     font-size: 2em;
     text-shadow: 5px 5px 10px #000;
 }
 
+.containerAll {
+    width: 100%;
+    margin-top: 20px;
+    /* min-height: 100vh; */
+    padding-inline: 10%;
+    /* overflow-x: hidden; */
+    /* background-color: yellow; */
+    position: relative;
+    padding-inline: 10%;
+    padding-bottom: 50px;
+}
+
 .containerNews {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    position: absolute;
+    /* background-color: tomato; */
+    /* position: absolute; */
+    position: relative;
     width: 100%;
     top: 25%;
+    /* padding-inline: 10%; */
+
 }
 
 .newsBox1{
@@ -167,6 +346,7 @@ body::-webkit-scrollbar-track {
 .newsCard {
     height: 200px;
     width: auto;
+    /* background-color: aqua; */
 }
 
 .newsCard>a {
@@ -183,20 +363,10 @@ body::-webkit-scrollbar-track {
     padding: 5px;
 }
 
-.newsCard2>h4 {
-    color:rgb(182, 182, 182) ;
-}
-
-.newsBox2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px 0px;
-}
-
-.containerCard2 {
-    display: flex;
-    flex-direction: row;
-    gap: 0px 20px;
+.newsCard2 {
+    padding-inline: 10%;
+    color: #fff;
+    text-decoration: none;
 }
 
 .containerNews img {
@@ -208,20 +378,26 @@ body::-webkit-scrollbar-track {
 /* footer */
 
 #footerHome{
-    height: 50vh;
+    /* height: 50vh; */
     width: 100%;
     background-color: #121213;
+    padding-inline: 10%;
+
 }
 
 .containerFoot{
     display: flex;
     justify-content: space-around;
     padding: 40px 200px;
+    padding-inline: 10%;
+    /* background-color: #017A23; */
+    /* overflow-x: hidden; */
 }
 
 .containerFoot ul{
     list-style-type: none;
     text-align: center;
+    /* width:max-content; */
 }
 
 .containerFoot>ul>li{
@@ -248,9 +424,11 @@ body::-webkit-scrollbar-track {
 }
 
 .footSosmed{
-    text-align: center;
     padding: 15px;
-    
+    width: 100%;
+    /* position: absolute; */
+    text-align: center;
+    overflow-x: hidden;
 }
 
 .footSosmed>a{

@@ -13,23 +13,23 @@
 <body>
     <!-- Header -->
     <header class="container">
-        <a href="../index.html" class="logo">
+        <a href="#homePage" class="logo">
             <img class="logo" src="../gambar/logoWeb.png" alt="Mymouse" width="180px">
         </a>
-        <nav>
-            <ul class="navigation">
+        <nav class="">
+            <ul class="navigation ">
                 <li><a href="../index.html">beranda</a></li>
-                <li><a href="">tetikus</a>
-                    <ul class="dropdown">
+                <li><button id="btnDrop1">tetikus</button>
+                    <ul class="dropdown1" id="drop1">
                         <li><a href="../index.html#definitionPage">pengertian</a></li>
                         <li><a href="../index.html#historyPage">sejarah</a></li>
                         <li><a href="../index.html#functionPage">Fungsi</a></li>
                     </ul>
                 </li>
-                <li><a href="../jenis/index.html">jenis</a></li>
-                <li><a href="index.html">berita</a></li>
-                <li><a href="">kontak</a>
-                    <ul class="dropdown">
+                <li><a href="../jenis/">jenis</a></li>
+                <li><a href="/">berita</a></li>
+                <li><button onclick="btnTetikus()" id="btnDrop2">kontak</button>
+                    <ul class="dropdown2" id="drop2">
                         <li><a href="https://www.facebook.com/mymouseofc/" target="_blank">Facebook</a></li>
                         <li><a href="https://twitter.com/curvast" target="_blank">Twiter</a></li>
                         <li><a href="https://www.instagram.com/mymouseofc/" target="_blank">Instagram</a></li>
@@ -39,19 +39,32 @@
                         </li>
                     </ul>
                 </li>
+                <li class="toko"><a href="../toko/">toko</a></li>
             </ul>
         </nav>
-        <a href="../toko/"><img class="shopLogo" src="../gambar/Union.png" alt="" width="30px"></a>
+        <a href="toko/" class="log"><img class="shopLogo" src="gambar/Union.png" alt="" width="30px"></a>
+        <div class="hamburger">
+            <input type="checkbox" name="" id="">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
-    <div class="keAtas">
-        <a href="#news"><img src="../gambar/keatas.png" alt="keatas" width="30px" height="auto"></a>
-    </div>
+
+    <a href="#news" class="keAtas"><img src="../gambar/keatas.png" alt="keatas" width="30px" height="auto"></a>
+
 
     <section id="news" class="newsPage1">
         <h1 class="newsHeader">News</h1>
-        <div class="containerNews">
-            <div class="newsBox1">
-                <!-- satu -->
+        <div class="containerAll">
+            <div class="containerNews">
+
+                <div class="newsCard2">
+                    <video width="100%" controls>
+                        <source src="../gambar/News2.mp4" type="video/mp4">
+                    </video>
+                    <h4>Logitech Pop Mouse: Muncul Dengan Warna dan Emoji mencolok | The Gadgets 360 show</h4>
+                </div>
                 <div class="newsCard">
                     <a href="https://www.liputan6.com/disabilitas/read/4430079/perusahaan-ini-meluncurkan-mouse-komputer-khusus-untuk-anak-disabilitas"
                         target="_blank">
@@ -59,7 +72,7 @@
                         <h4>Perusahaan Ini Meluncurkan Mouse Komputer Khusus untuk Anak Disabilitas</h4>
                     </a>
                 </div>
-                <!-- dua -->
+
                 <div class="newsCard">
                     <a href="https://inet.detik.com/review-produk/d-6135612/review-logitech-mx-master-3s-mouse-premium-yang-pendiam"
                         target="_blank">
@@ -67,7 +80,7 @@
                         <h4>Review Logitech MX Master 3S, Mouse Premium yang Pendiam</h4>
                     </a>
                 </div>
-                <!-- tiga -->
+
                 <div class="newsCard">
                     <a href="https://inet.detik.com/review-produk/d-6096786/review-logitech-lift-mouse-vertikal-yang-unik"
                         target="_blank">
@@ -75,42 +88,30 @@
                         <h4>Review Logitech Lift, Mouse Vertikal yang Unik</h4>
                     </a>
                 </div>
-            </div>
-            <div class="newsBox2">
-                <div class="newsCard2">
-                    <video width="790px" controls>
-                        <source src="../gambar/News2.mp4" type="video/mp4">
-                    </video>
-                    <h4>Logitech Pop Mouse: Muncul Dengan Warna dan Emoji mencolok | The Gadgets 360 show</h4>
+                <div class="newsCard">
+                    <a href="https://techno.okezone.com/read/2022/08/15/57/2647968/7-cara-sederhana-atasi-masalah-pada-wireless-mouse-dijamin-ampuh"
+                        target="_blank">
+                        <img src="../gambar/news4.jpeg" alt="Mouse Wireless">
+                        <h4>7 Cara Sederhana Atasi Masalah pada Wireless Mouse, Dijamin Ampuh</h4>
+                    </a>
                 </div>
-                <div class="containerCard2">
-                    <!-- empat -->
-                    <div class="newsCard">
-                        <a href="https://techno.okezone.com/read/2022/08/15/57/2647968/7-cara-sederhana-atasi-masalah-pada-wireless-mouse-dijamin-ampuh"
-                            target="_blank">
-                            <img src="../gambar/news4.jpeg" alt="Mouse Wireless">
-                            <h4>7 Cara Sederhana Atasi Masalah pada Wireless Mouse, Dijamin Ampuh</h4>
-                        </a>
-                    </div>
-                    <!-- lima -->
-                    <div class="newsCard">
-                        <a href="https://techno.okezone.com/read/2022/10/17/326/2688572/6-mouse-gaming-terbaik-dari-razer-viper-ultimate-hingga-hyperx-pulsefire-haste"
-                            target="_blank">
-                            <img src="../gambar/news5.jfif" alt="Mouse Gaming">
-                            <h4>6 Mouse Gaming Terbaik, dari Razer Viper Ultimate hingga HyperX Pulsefire Haste</h4>
-                        </a>
-                    </div>
-                    <!-- enam -->
-                    <div class="newsCard">
-                        <a href="https://www.liputan6.com/tekno/read/4858892/logitech-signature-m650-mouse-nirkabel-senyap-yang-ramah-lingkungan"
-                            target="_blank">
-                            <img src="../gambar/news6.jpg" alt="Logitech Signature M650">
-                            <h4>Logitech Signature M650, Mouse Nirkabel Senyap yang Ramah Lingkungan</h4>
-                        </a>
-                    </div>
+
+                <div class="newsCard">
+                    <a href="https://techno.okezone.com/read/2022/10/17/326/2688572/6-mouse-gaming-terbaik-dari-razer-viper-ultimate-hingga-hyperx-pulsefire-haste"
+                        target="_blank">
+                        <img src="../gambar/news5.jfif" alt="Mouse Gaming">
+                        <h4>6 Mouse Gaming Terbaik, dari Razer Viper Ultimate hingga HyperX Pulsefire Haste</h4>
+                    </a>
+                </div>
+
+                <div class="newsCard">
+                    <a href="https://www.liputan6.com/tekno/read/4858892/logitech-signature-m650-mouse-nirkabel-senyap-yang-ramah-lingkungan"
+                        target="_blank">
+                        <img src="../gambar/news6.jpg" alt="Logitech Signature M650">
+                        <h4>Logitech Signature M650, Mouse Nirkabel Senyap yang Ramah Lingkungan</h4>
+                    </a>
                 </div>
             </div>
-        </div>
         </div>
 
     </section>
@@ -164,6 +165,7 @@
                     src="../gambar/sosmed/linkedin.png" alt="li"></a>
         </div>
     </footer>
+    <script src="../script.js"></script>
 </body>
 
 </html>
